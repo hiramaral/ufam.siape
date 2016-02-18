@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="siapefx.Controller">
+    <top>
+        <MenuBar>
+            <Menu text="Arquivo">
+                <MenuItem text="sair" onAction="#onExit" />  
+            </Menu>       
+        </MenuBar>                 
+    </top>
+    <left>
+        <TableView> 
+            <columns> 
+                <TableColumn text="Site/Serviço" prefWidth="120"/>
+                <TableColumn text="Login" prefWidth="120"/>     
+            </columns>    
+        </TableView>        
+    </left>
+    <center> 
+        <GridPane hgap="5" vgap="5"> 
+            <BorderPane.margin>  
+                <Insets left="10" top="10"/>
+            </BorderPane.margin>  
+            <Label text="Site/Serviço:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <TextField GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" /> 
+      
+            <Label text="Login:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" /> 
+            
+            <HBox GridPane.rowIndex="2" GridPane.columnSpan="2" alignment="CENTER_RIGHT" spacing="10">                
+                <GridPane.margin> 
+                    <Insets top="15"/> 
+                </GridPane.margin>               
+                <Button text="Cancelar" prefWidth="80"  />
+                <Button text="Confirmar" prefWidth="80" />           
+            </HBox>
+        </GridPane>
+    </center>
+</BorderPane>

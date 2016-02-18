@@ -1,0 +1,8 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix} Andre Cavalcante, Rafael Mendonca, Hiram Amaral
+${licensePrefix} Copyright UFAM 2015-2016
+<#if licenseLast??>
+${licenseLast}
+</#if>
